@@ -76,7 +76,7 @@ export const SeverityTrendsChart = ({ data }) => {
       
       <div className="mt-4 p-4 bg-muted rounded-lg">
         <p className="text-sm text-muted-foreground">
-          <span className="font-semibold text-foreground">Insight:</span> Track severity trends to identify quality improvements or degradation over release cycles.
+          <span className="font-semibold text-foreground">Recommendation:</span> Monitor severity trend changes month-over-month to assess quality trajectory. Investigate spikes in Critical and High severity defects, particularly in recent periods, to identify release-specific quality issues or testing gaps.
         </p>
       </div>
     </Card>
