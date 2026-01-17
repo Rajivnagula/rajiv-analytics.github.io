@@ -76,7 +76,7 @@ export const SeverityTrendsChart = ({ data }) => {
       
       <div className="mt-4 p-4 bg-muted rounded-lg">
         <p className="text-sm text-muted-foreground">
-          <span className="font-semibold text-foreground">Recommendation:</span> Monitor severity trend changes month-over-month to assess quality trajectory. Investigate spikes in Critical and High severity defects, particularly in recent periods, to identify release-specific quality issues or testing gaps.
+          <span className="font-semibold text-foreground">Recommendation:</span> Engineering leadership should track severity mix on a monthly cadence to assess quality trajectory before each release checkpoint. Notable increases in Critical or High severity defects—particularly if clustered in recent sprints—signal the need for triage process review, expanded test coverage, or postponement of lower-priority feature work until defect backlog stabilizes.
         </p>
       </div>
     </Card>
