@@ -49,6 +49,8 @@ Recommendation
 1. DELAY v2.3 until Auth recurrence <25%
 2. ADD UAT sprint for Auth/Payments (2 weeks)
 3. RCA required for >30% modules before release
+![Module Risk Chart](risk-chart.png)
+
 
 📊 Project 2: Sales SLA Analysis (Power BI - Live 1/20)
 Kaggle sales dataset → Backlog aging + SLA breach trends
