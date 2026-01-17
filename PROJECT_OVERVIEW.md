@@ -195,14 +195,9 @@ yarn install
 
 ## Limitations & Next Steps
 
-### Current Limitations
-1. **Mock Data**: Backend generates synthetic data (no persistence)
-2. **No Filtering UI**: Filter panel component created but not integrated
-3. **Read-Only**: No defect editing or creation capabilities
-4. **No Authentication**: Open access to all data
-5. **No Real-Time Updates**: Requires manual refresh
+This dashboard uses simulated operational data to demonstrate analytical approach rather than production metrics. Trends are directional and intended for prioritization, not prediction. With access to real defect and release data, this analysis could be extended to include SLA tracking, root-cause categorization, and integration with tools such as JIRA.
 
-### Recommended Next Steps
+### Recommended Enhancements
 1. **Data Persistence**:
    - Connect to real defect tracking system
    - Implement MongoDB integration for data storage
