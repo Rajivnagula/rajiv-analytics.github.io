@@ -295,6 +295,12 @@ async def get_defect_analytics():
 async def root():
     return {"message": "Defect Analytics API"}
 
+# Additional health check in api_router (provides /api/health via router)
+@api_router.get("/healthcheck")
+async def health_check_router():
+    """Alternative health check endpoint via router"""
+    return {"status": "ok"}
+
 @api_router.post("/status", response_model=StatusCheck)
 async def create_status_check(input: StatusCheckCreate):
     status_dict = input.model_dump()
