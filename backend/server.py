@@ -23,11 +23,20 @@ db = client[os.environ['DB_NAME']]
 # Create the main app without a prefix
 app = FastAPI()
 
+# Add CORS middleware FIRST (before routes)
+app.add_middleware(
+    CORSMiddleware,
+    allow_credentials=True,
+    allow_origins=os.environ.get('CORS_ORIGINS', '*').split(','),
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 # Health check endpoint for Kubernetes (must be at root /health, not /api/health)
 @app.get("/health")
 async def health_check():
     """Health check endpoint for Kubernetes liveness and readiness probes"""
-    return {"status": "healthy", "service": "defect-analytics-api"}
+    return {"status": "ok"}
 
 # Create a router with the /api prefix
 api_router = APIRouter(prefix="/api")
