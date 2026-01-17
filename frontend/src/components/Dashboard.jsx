@@ -123,19 +123,19 @@ export const Dashboard = () => {
               <div className="flex gap-3">
                 <span className="text-primary font-semibold">•</span>
                 <p className="text-sm text-muted-foreground">
-                  <span className="font-semibold text-foreground">Data Quality Tradeoffs:</span> Analysis includes records with missing fields to reflect real operational data patterns. Filtering incomplete records would obscure systemic data collection issues that require process improvements.
+                  <span className="font-semibold text-foreground">Data Quality Tradeoffs:</span> This analysis includes records with incomplete field coverage to provide an accurate view of operational data quality as it exists in practice. Filtering these records would mask systemic issues in defect intake and triage workflows that stakeholders should address through improved tooling or process enforcement.
                 </p>
               </div>
               <div className="flex gap-3">
                 <span className="text-primary font-semibold">•</span>
                 <p className="text-sm text-muted-foreground">
-                  <span className="font-semibold text-foreground">Recurrence Methodology:</span> Defect recurrence is identified by title matching, which may undercount true recurrence if naming conventions are inconsistent. Recommend implementing defect fingerprinting for more accurate tracking.
+                  <span className="font-semibold text-foreground">Recurrence Methodology:</span> Defect recurrence is calculated using title string matching. This approach may undercount true recurrence if naming conventions vary across teams or releases. For production-grade tracking, stakeholders should consider implementing defect fingerprinting based on stack traces, affected modules, and error signatures.
                 </p>
               </div>
               <div className="flex gap-3">
                 <span className="text-primary font-semibold">•</span>
                 <p className="text-sm text-muted-foreground">
-                  <span className="font-semibold text-foreground">Severity Distribution:</span> Current analysis treats all severity levels as reported without normalization. Inconsistent severity assignment across teams may affect trend accuracy and should be addressed through standardized triage guidelines.
+                  <span className="font-semibold text-foreground">Severity Classification:</span> Severity levels are analyzed as reported without normalization. Inconsistent severity assignment across product teams may introduce bias in trend interpretation. Standardized severity triage guidelines—ideally documented and enforced at intake—would improve the reliability of these descriptive summary metrics for decision-making.
                 </p>
               </div>
             </div>
