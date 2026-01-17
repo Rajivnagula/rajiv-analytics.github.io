@@ -32,10 +32,16 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Health check endpoint for Kubernetes (must be at root /health, not /api/health)
+# BULLETPROOF Health check endpoints - registered on main app instance
+# These are added directly to app (not router) to ensure they're always accessible
 @app.get("/health")
-async def health_check():
-    """Health check endpoint for Kubernetes liveness and readiness probes"""
+async def health_check_root():
+    """Health check at /health for Kubernetes probes"""
+    return {"status": "ok"}
+
+@app.get("/api/health")
+async def health_check_api():
+    """Health check at /api/health as fallback"""
     return {"status": "ok"}
 
 # Create a router with the /api prefix
