@@ -81,7 +81,7 @@ export const ComponentSeverityHeatmap = ({ data }) => {
       
       <div className="mt-4 p-4 bg-muted rounded-lg">
         <p className="text-sm text-muted-foreground">
-          <span className="font-semibold text-foreground">Recommendation:</span> Allocate additional engineering resources to components with concentrated Critical and High severity defects. Consider targeted code reviews and increased test coverage for the top 3 components to reduce defect density and improve system stability.
+          <span className="font-semibold text-foreground">Recommendation:</span> Resource planning discussions should account for components showing concentrated Critical and High severity defects. The product roadmap may need to include dedicated stabilization phases for these areas—entailing targeted code reviews, expanded unit test coverage, and architectural refactoring—before committing to aggressive feature expansion timelines in those same modules.
         </p>
       </div>
     </Card>
