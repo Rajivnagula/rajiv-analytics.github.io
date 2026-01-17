@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sai Rajiv | Junior Business Analyst Portfolio</title>
+<style>body{font-family:Arial;margin:40px;background:#f4f4f4;} h1{color:#333;} .project{border:1px solid #ddd;padding:20px;margin:20px 0;background:white;}</style>
+</head>
+<body>
+<h1>Sai Rajiv - DePaul MS Info Systems | SQL/Python/Excel/Power BI</h1>
+<p>Waukegan, IL | Job-ready in 30 days | Focus: Requirements, UAT, Process Analytics</p>
+
+<div class="project">
+<h2>🏭 Project 1: Defect Recurrence & Release Risk (SQL + Dashboard)</h2>
+<p><b>Problem:</b> Recurring defects delay releases, costing $X. Analyzed 10k tickets.</p>
+<p><b>SQL Insight:</b> Recurrence Rate = Repeats / Total per Module<br>
+<code>SELECT module, COUNT(DISTINCT id) / COUNT(*) AS recurrence_rate FROM defects GROUP BY module ORDER BY recurrence_rate DESC LIMIT 5;</code> [attached_file:1]</p>
+<p><b>Key Findings:</b></p>
+<ul>
+<li>Module 'Auth' = 42% recurrence risk → Prioritize testing.</li>
+<li>Release v2.3 "At Risk" (15 criticals > avg 8).</li>
+<li>Insight: Fix top 3 modules cuts risk 30%.</li>
+</ul>
+<p>Dashboard: [Paste screenshot PNG here or link]. Full SQL/Jupyter: <a href="defect_analysis.ipynb">Download</a></p>
+</div>
+
+<div class="project">
+<h2>📊 Project 2: Sales SLA Analysis (Excel/Power BI - In Progress)</h2>
+<p>Analyzing Kaggle sales data for backlog trends. SQL + visuals coming 1/20.</p>
+</div>
+
+<p><a href="https://www.linkedin.com/in/sairajiv">LinkedIn</a> | <a href="Rajiv_Resume.pdf">Resume PDF</a></p>
+</body>
+</html>
