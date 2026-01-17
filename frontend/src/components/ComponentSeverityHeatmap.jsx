@@ -81,7 +81,7 @@ export const ComponentSeverityHeatmap = ({ data }) => {
       
       <div className="mt-4 p-4 bg-muted rounded-lg">
         <p className="text-sm text-muted-foreground">
-          <span className="font-semibold text-foreground">Insight:</span> Components with high critical/high defects need immediate attention and refactoring.
+          <span className="font-semibold text-foreground">Recommendation:</span> Allocate additional engineering resources to components with concentrated Critical and High severity defects. Consider targeted code reviews and increased test coverage for the top 3 components to reduce defect density and improve system stability.
         </p>
       </div>
     </Card>
