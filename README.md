@@ -25,6 +25,12 @@ Product teams often lack clear visibility into recurring defects, severity trend
 > *Note: This is an analyst-led case study using simulated data for demonstration purposes. The focus is on analytical reasoning and decision support, not engineering implementation.*
 
 ---
+### Sample Views
+
+![Defect Dashboard Overview](images/defect-dashboard-overview.png)
+
+![Defect Recurrence Analysis](images/defect-recurrence.png)
+
 
 ## Project 2: (In Progress)
 **Operational Ticket Backlog & SLA Analysis**  
