@@ -113,6 +113,33 @@ export const Dashboard = () => {
         <div className="animate-fade-in" style={{ animationDelay: '0.5s' }}>
           <ReleaseCalendar data={analytics?.release_calendar || []} />
         </div>
+
+        {/* Analyst Notes */}
+        <div className="mt-8 animate-fade-in" style={{ animationDelay: '0.6s' }}>
+          <Card className="p-6 border border-border bg-card">
+            <h2 className="text-xl font-bold text-foreground mb-4">Analyst Notes</h2>
+            <div className="space-y-3">
+              <div className="flex gap-3">
+                <span className="text-primary font-semibold">•</span>
+                <p className="text-sm text-muted-foreground">
+                  <span className="font-semibold text-foreground">Data Quality Tradeoffs:</span> Analysis includes records with missing fields to reflect real operational data patterns. Filtering incomplete records would obscure systemic data collection issues that require process improvements.
+                </p>
+              </div>
+              <div className="flex gap-3">
+                <span className="text-primary font-semibold">•</span>
+                <p className="text-sm text-muted-foreground">
+                  <span className="font-semibold text-foreground">Recurrence Methodology:</span> Defect recurrence is identified by title matching, which may undercount true recurrence if naming conventions are inconsistent. Recommend implementing defect fingerprinting for more accurate tracking.
+                </p>
+              </div>
+              <div className="flex gap-3">
+                <span className="text-primary font-semibold">•</span>
+                <p className="text-sm text-muted-foreground">
+                  <span className="font-semibold text-foreground">Severity Distribution:</span> Current analysis treats all severity levels as reported without normalization. Inconsistent severity assignment across teams may affect trend accuracy and should be addressed through standardized triage guidelines.
+                </p>
+              </div>
+            </div>
+          </Card>
+        </div>
       </main>
     </div>
   );
