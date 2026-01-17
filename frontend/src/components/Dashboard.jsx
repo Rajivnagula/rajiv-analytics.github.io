@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Card } from './ui/card';
 import { KPIHeader } from './KPIHeader';
 import { DefectRecurrenceChart } from './DefectRecurrenceChart';
 import { SeverityTrendsChart } from './SeverityTrendsChart';
