@@ -16,6 +16,8 @@
 <code>SELECT module, COUNT(DISTINCT id) / COUNT(*) AS recurrence_rate FROM defects GROUP BY module ORDER BY recurrence_rate DESC LIMIT 5;</code> [attached_file:1]</p>
 <p><b>Key Findings:</b></p>
 <ul>
+ <p><b>Business Impact:</b> Prioritize UAT on Auth/Payments → 30% release risk reduction. Delay v2.3 until criticals <10.</p>
+
 <li>Module 'Auth' = 42% recurrence risk → Prioritize testing.</li>
 <li>Release v2.3 "At Risk" (15 criticals > avg 8).</li>
 <li>Insight: Fix top 3 modules cuts risk 30%.</li>
