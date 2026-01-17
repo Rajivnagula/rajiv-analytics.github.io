@@ -45,6 +45,8 @@ Cycle Time: +37% resolution time for recurring issues
 
 Rollback Risk: Top 3 modules fixed → 30% risk reduction
 
+**Business Impact:** Prioritize UAT on high-risk modules (Auth & Payments) → estimated 30% release-risk reduction. Hold release until critical recurrence <10%.
+
 Recommendation
 1. DELAY v2.3 until Auth recurrence <25%
 2. ADD UAT sprint for Auth/Payments (2 weeks)
