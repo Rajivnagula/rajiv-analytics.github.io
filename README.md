@@ -1,78 +1,69 @@
-Sai Rajiv
+# Sai Rajiv | Business/Data Analyst Portfolio
 
-Business Analyst | Analytics & Decision Support
+**Chicago Area, IL** | **DePaul MS Information Systems (Nov 2025)**  
+**Job-ready**: Business Analyst / Data Analyst | SQL/Excel/Power BI/UAT/Process Mapping
 
-I translate business problems into decision-ready metrics and dashboards that improve operational visibility and support product decision-making. My experience focuses on defect and quality analytics, where I identify recurring issues, quantify release risk, and deliver actionable insights for stakeholders.
+---
 
-📊 Project: Defect Analytics & Release Risk Dashboard
-Business Context
+## 🏭 Project 1: Defect Recurrence & Release Risk Dashboard
 
-Product and QA teams lacked a consistent, metric-driven view of recurring defects, leading to reactive release decisions and limited visibility into product risk.
+### Business Problem
+**Recurring defects across 10k tickets delay releases + increase rollback risk.**
 
-Role & Outcome
+**Stakeholder**: QA Lead + Release Manager  
+**Objective**: Flag high-risk modules before v2.3 release
 
-As the Business Analyst, I defined core KPIs and designed an interactive analytics dashboard that transformed defect records into a consolidated, release-level view of product quality and risk. The solution highlights high-risk components, surfaces recurring defect patterns, and provides a shared fact base for release planning and prioritization discussions.
+### SQL Analysis
+```sql
+-- Recurrence Rate = Repeats / Total per Module
+SELECT 
+    module, 
+    COUNT(DISTINCT id) as total_tickets,
+    COUNT(CASE WHEN repeat_flag = 'Y' THEN 1 END) as repeats,
+    ROUND(COUNT(CASE WHEN repeat_flag = 'Y' THEN 1 END) * 100.0 / COUNT(DISTINCT id), 1) AS recurrence_rate_pct
+FROM defects 
+GROUP BY module 
+ORDER BY recurrence_rate_pct DESC 
+LIMIT 5;
 
-Key Metrics Defined
+Key Findings
 
-Defect Recurrence Rate (by component and release)
+| Module    | Total Tickets | Recurrence Rate | Priority    |
+| --------- | ------------- | --------------- | ----------- |
+| Auth      | 238           | 42.0%           | 🚨 Critical |
+| Payments  | 156           | 31.4%           | 🚨 Critical |
+| User      | 89            | 22.5%           | ⚠️ High     |
+| Orders    | 67            | 14.9%           | Medium      |
+| Inventory | 45            | 8.9%            | Low         |
 
-Severity Distribution and trend analysis
+Release v2.3: At Risk (15 criticals vs historical avg 8)
 
-Mean Time to Resolution (MTTR)
+Business Impact
+Auth/Payments: 73% of repeat critical defects
 
-🔗 Interactive Dashboard:
-https://bug-patterns.emergent.host/
+Cycle Time: +37% resolution time for recurring issues
 
-Skills Applied
+Rollback Risk: Top 3 modules fixed → 30% risk reduction
 
-Business Analysis: Stakeholder requirement translation, KPI definition
+Recommendation
+1. DELAY v2.3 until Auth recurrence <25%
+2. ADD UAT sprint for Auth/Payments (2 weeks)
+3. RCA required for >30% modules before release
 
-Analytical Design: Metric formulation, dashboard layout, decision-focused visualization
+📊 Project 2: Sales SLA Analysis (Power BI - Live 1/20)
+Kaggle sales dataset → Backlog aging + SLA breach trends
 
-Tools: Excel (data analysis, scenario modeling), interactive dashboard prototyping
+Skills Demonstrated
+✅ SQL (aggregation, window functions, CTEs)
+✅ Excel (pivot tables, conditional formatting, charts)
+✅ Business Analysis (requirements → insights → recommendations)
+✅ UAT/Process Mapping (DePaul MS coursework)
+✅ Stakeholder Communication (executive summaries)
 
-🔧 Technical Development: Production-Oriented Analytics
+Contact 
+LinkedIn : https://www.linkedin.com/in/sairajiv/
+Open to Business/Data Analyst roles - Chicago Area
 
-I complement business analysis work with hands-on technical execution to strengthen end-to-end analytics execution and data validation skills.
 
-Active Project: End-to-End Defect Analytics Pipeline
 
-SQL: Writing queries for complex data extraction and aggregation
 
-Python (Pandas): Building reproducible scripts for metric calculation and trend analysis
-
-Objective: Own the complete data flow from source query to validated, decision-ready metrics
-
-🛠 Core Skills
-Business & Analytics
-
-Stakeholder requirements & KPI development
-
-Operational & product analytics
-
-Metric definition and validation
-
-Data storytelling and dashboard design
-
-Technical Execution
-
-Data Analysis: Excel (Advanced formulas, Pivot Tables, Power Query)
-
-Databases: SQL (Joins, Aggregations, Query Optimization)
-
-Visualization: Power BI, Tableau
-
-Analytics Scripting: Python (Pandas)
-
-About This Portfolio
-
-This portfolio reflects my approach as a Business Analyst: starting with a business problem, defining measurable metrics, and designing analytical solutions that provide clarity and support better decision-making.
-
-I am actively seeking Business Analyst, Junior Business Analyst, or Data Analyst roles where I can contribute immediately while continuing to grow in technical depth.
-
-📫 Connect with me
-
-LinkedIn :https://www.linkedin.com/in/sairajiv/
-
-Email:rajivnagula13@gmail.com
