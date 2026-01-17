@@ -39,7 +39,7 @@ export const ReleaseCalendar = ({ data }) => {
               </div>
               
               <p className="text-xs text-muted-foreground mb-3">
-                Based on open and critical defect volume
+                Classification based on open and critical defect volume
               </p>
               
               <div className="space-y-2">
@@ -76,7 +76,7 @@ export const ReleaseCalendar = ({ data }) => {
       
       <div className="mt-4 p-4 bg-muted rounded-lg">
         <p className="text-sm text-muted-foreground">
-          <span className="font-semibold text-foreground">Recommendation:</span> Focus stabilization efforts on releases marked "High Defect Load" before proceeding with new feature development. Prioritize defect resolution in these releases to reduce technical debt and improve customer satisfaction.
+          <span className="font-semibold text-foreground">Recommendation:</span> Release planning should incorporate deliberate stabilization windows for versions exhibiting High Defect Load characteristics. Leadership may need to delay new feature commitments or reallocate QA resources to these releases to reduce customer-facing risk and technical debt accumulation. This prioritization ensures customer experience remains consistent with product positioning and SLA expectations.
         </p>
       </div>
     </Card>
