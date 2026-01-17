@@ -71,13 +71,13 @@ export const Dashboard = () => {
           <div className="flex items-center justify-between">
             <div>
               <h1 className="text-3xl font-bold text-foreground">Defect Analytics Dashboard</h1>
-              <p className="text-muted-foreground mt-1">Real-time insights into defect patterns and quality metrics</p>
+              <p className="text-muted-foreground mt-1">Analyst-led case study on defect recurrence, severity trends, and data quality for product teams.</p>
             </div>
             <button 
               onClick={fetchAnalytics}
               className="px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary-hover transition-colors text-sm font-medium"
             >
-              Refresh Data
+              Reload Sample Dataset
             </button>
           </div>
         </div>
