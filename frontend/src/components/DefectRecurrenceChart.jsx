@@ -56,7 +56,7 @@ export const DefectRecurrenceChart = ({ data }) => {
       
       <div className="mt-4 p-4 bg-muted rounded-lg">
         <p className="text-sm text-muted-foreground">
-          <span className="font-semibold text-foreground">Recommendation:</span> Prioritize root cause analysis for the top 3 recurring defect types. Consider architectural review of components generating Null Pointer Exceptions and Memory Leaks, as these patterns suggest structural issues rather than isolated bugs.
+          <span className="font-semibold text-foreground">Recommendation:</span> Product leadership should prioritize engineering investment in addressing the top 3 recurring defect patterns. Specifically, the architectural contributors to Null Pointer Exceptions and Memory Leaks warrant dedicated sprint capacity, as recurrence at this frequency indicates underlying design issues rather than isolated implementation bugs. This allocation should be balanced against feature velocity commitments.
         </p>
       </div>
     </Card>
