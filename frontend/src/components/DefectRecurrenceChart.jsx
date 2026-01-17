@@ -56,7 +56,7 @@ export const DefectRecurrenceChart = ({ data }) => {
       
       <div className="mt-4 p-4 bg-muted rounded-lg">
         <p className="text-sm text-muted-foreground">
-          <span className="font-semibold text-foreground">Insight:</span> Higher recurrence counts indicate systemic issues requiring root cause analysis.
+          <span className="font-semibold text-foreground">Recommendation:</span> Prioritize root cause analysis for the top 3 recurring defect types. Consider architectural review of components generating Null Pointer Exceptions and Memory Leaks, as these patterns suggest structural issues rather than isolated bugs.
         </p>
       </div>
     </Card>
