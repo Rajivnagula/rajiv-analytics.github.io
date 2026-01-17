@@ -20,7 +20,8 @@ export const ReleaseCalendar = ({ data }) => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
         {data.map((release, index) => {
           const openPercentage = (release.open / release.total) * 100;
-          const isHealthy = openPercentage < 30;
+          const criticalThreshold = 30; // 30% or more open defects
+          const isHighLoad = openPercentage >= criticalThreshold;
           
           return (
             <Card 
@@ -30,12 +31,16 @@ export const ReleaseCalendar = ({ data }) => {
               <div className="flex items-center justify-between mb-3">
                 <h3 className="font-bold text-lg text-foreground">{release.release}</h3>
                 <Badge 
-                  variant={isHealthy ? "outline" : "destructive"}
+                  variant={isHighLoad ? "destructive" : "outline"}
                   className="text-xs"
                 >
-                  {isHealthy ? 'Healthy' : 'At Risk'}
+                  {isHighLoad ? 'High Defect Load' : 'Stable'}
                 </Badge>
               </div>
+              
+              <p className="text-xs text-muted-foreground mb-3">
+                Based on open and critical defect volume
+              </p>
               
               <div className="space-y-2">
                 <div className="flex justify-between items-center">
@@ -71,7 +76,7 @@ export const ReleaseCalendar = ({ data }) => {
       
       <div className="mt-4 p-4 bg-muted rounded-lg">
         <p className="text-sm text-muted-foreground">
-          <span className="font-semibold text-foreground">Note:</span> This is a descriptive view of defects by release version. Releases with high open defect counts should be prioritized for stabilization.
+          <span className="font-semibold text-foreground">Recommendation:</span> Focus stabilization efforts on releases marked "High Defect Load" before proceeding with new feature development. Prioritize defect resolution in these releases to reduce technical debt and improve customer satisfaction.
         </p>
       </div>
     </Card>
